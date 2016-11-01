@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>jQuery Data Mapper</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <br />
+    <div class="page-header">
+        <h1 class="text-center">Data Mapper <small>import and drag</small></h1>
+    </div>
+    <div class="container">
+        <div id="datamapper " class="datamapper">
+
+            <div class="row row-buttons">
+                <!-- button row -->
+                <div class="col-md-4 centered">
+                    <span class="btn btn-default btn-file btn-fixed-width">
+          Import CSV <input id="importCsv" class="importCsv" type="file" accept=".csv">
+        </span>
+                </div>
+                <div class="col-md-4 centered">
+                    <button type="button" class="btn btn-default btn-fixed-width" id="reset">
+          <span class="glyphicon glyphicon-refresh"></span> Reset
+        </button>
+                </div>
+                <div class="col-md-4 centered">
+                    <button type="submit" class="btn btn-default btn-fixed-width" id="submit">
+          <span class="glyphicon glyphicon-ok-circle"></span> Submit
+        </button>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <!-- mapper row -->
+                <div class="col-md-4 centered">
+                    <div class="panel panel-default">
+                        <div class="panel-heading pool">Unorganized Data</div>
+                        <div class="panel-body">
+                            <ul id="pool" class="sortable unordered list-group">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- end column (left) -->
+
+                <form action="#" id="form">
+                    <div class="col-md-4 centered">
+
+                        <div class="sorted">
+                            <div class="panel panel-default">
+                                <div class="panel-heading sorted" id="fn">First Name</div>
+                                <div class="sortable ordered panel-body" id="firstname"></div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading sorted" id="ln">Last Name</div>
+                                <div class="sortable ordered panel-body" id="lastname"></div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading sorted">Placeholder</div>
+                                <div class="sortable ordered panel-body" id=""></div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading sorted">Placeholder</div>
+                                <div class="sortable ordered panel-body" id=""></div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading sorted">Placeholder</div>
+                                <div class="sortable ordered panel-body" id=""></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+                <!-- end column (center) -->
+
+                <div class="col-md-4 centered">
+
+                    <div class="sorted">
+                        <div class="panel panel-default">
+                            <div class="panel-heading sorted" id="a1">Address Line 1</div>
+                            <div class="sortable ordered panel-body" id="address1"></div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading sorted" id="a2">Address Line 2</div>
+                            <div class="sortable ordered panel-body" id="address2"></div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading sorted" id="ci">City</div>
+                            <div class="sortable ordered panel-body" id="city"></div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading sorted" id="st">State</div>
+                            <div class="sortable ordered panel-body" id="state"></div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading sorted" id="zc">ZIP Code</div>
+                            <div class="sortable ordered panel-body" id="zipcode"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end column (right) -->
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-ui-1.11.4.js"></script>
+    <script src="../js/jquery.ui.swappable.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/Sortable.min.js"></script>
+    <script src="../js/papaparse.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
